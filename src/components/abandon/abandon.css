@@ -1,0 +1,10 @@
+.abandon {
+  display: flex;
+  justify-content: right;
+}
+.abandon-wrap {
+  background-color: #f6b0bb;
+  width: 80%;
+  border-radius: 8px;
+  padding: 10px 40px;
+}
