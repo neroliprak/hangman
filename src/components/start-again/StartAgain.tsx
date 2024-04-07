@@ -6,7 +6,7 @@ export const StartAgain = () => {
   };
   return (
     <div>
-      <Button onClick={handleReload} children={"Réactualisé"} />
+      <Button onClick={handleReload} children={"Réactualiser"} />
     </div>
   );
 };

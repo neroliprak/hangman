@@ -3,8 +3,9 @@
   justify-content: right;
 }
 .abandon-wrap {
+  text-align: center;
   border: 3px solid #2980d1;
   width: 80%;
   border-radius: 8px;
-  padding: 10px 40px;
+  padding: 20px 40px;
 }

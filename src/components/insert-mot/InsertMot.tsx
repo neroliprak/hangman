@@ -31,7 +31,7 @@ export const InsertMot = ({
       return;
     }
     // Je vérifie le nombre d'essaie de l'utilisateur
-    if (essai < 0) {
+    if (essai <= 0) {
       alert(`Vous avez dépassé la limite d'essai: ${maxEssai}`);
       return;
     }
@@ -50,29 +50,34 @@ export const InsertMot = ({
     return data.word.includes(letter);
   };
   return (
-    <div className="wrap-insert-mot">
-      <form className="insert-mot-form" onSubmit={handleSubmit}>
-        <p className="color-red">Votre nombre d'essai restant : {essai}</p>
-        <br />
-        <br />
-        <label htmlFor="mot">Entrez une lettre :</label>
-        <br />
-        <input type="text" id="mot" maxLength={1} ref={inputRef} />
-        <br />
-        <button type="submit">Ajouter</button>
-      </form>
-      <div className="wrap-idependant-letter">
-        {/* Je parcours tabLetters pour afficher les lettres insérés par l'utilisateur */}
-        {tabLetters.map((letter, index) => (
-          <p
-            key={index}
-            className={`independant-letter ${
-              isLetterCorrect(letter) ? "correct" : ""
-            }`}
-          >
-            {letter}
-          </p>
-        ))}
+    <div>
+      {essai <= 0 && (
+        <p className="defaite">Vous avez perdu, le mot était : {data.word}</p>
+      )}
+      <div className="wrap-insert-mot">
+        <form className="insert-mot-form" onSubmit={handleSubmit}>
+          <p className="color-red">Votre nombre d'essais restant : {essai}</p>
+          <br />
+          <br />
+          <label htmlFor="mot">Entrez une lettre :</label>
+          <br />
+          <input type="text" id="mot" maxLength={1} ref={inputRef} />
+          <br />
+          <button type="submit">Ajouter</button>
+        </form>
+        <div className="wrap-idependant-letter">
+          {/* Je parcours tabLetters pour afficher les lettres insérés par l'utilisateur */}
+          {tabLetters.map((letter, index) => (
+            <p
+              key={index}
+              className={`independant-letter ${
+                isLetterCorrect(letter) ? "correct" : ""
+              }`}
+            >
+              {letter}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );

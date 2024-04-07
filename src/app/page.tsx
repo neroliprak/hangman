@@ -89,11 +89,13 @@ export default function Home() {
       )}
       {/* Si l'utilisateur n'a pas encore gagné, alors il peut insérer */}
       {!victory && (
-        <InsertMot
-          data={data}
-          onLetterInsert={handleLetterInsert}
-          maxEssai={5}
-        ></InsertMot>
+        <div>
+          <InsertMot
+            data={data ?? { word: "" }}
+            onLetterInsert={handleLetterInsert}
+            maxEssai={7}
+          ></InsertMot>
+        </div>
       )}
     </div>
   );

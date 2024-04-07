@@ -1,10 +1,12 @@
 .wrap-insert-mot {
   justify-content: center;
   text-align: center;
-  background-color: aliceblue;
-  width: 80%;
+  background-color: rgb(96, 174, 252);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.232);
+  width: 60%;
   margin: auto;
   margin-top: 70px;
+  margin-bottom: 70px;
   padding: 30px 0;
   border-radius: 16px;
 }
@@ -32,19 +34,24 @@
 }
 .independant-letter {
   background-color: #e9463a;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.232);
   color: white;
-  padding: 10px;
+  padding: 12px;
 }
 .wrap-idependant-letter {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   padding: 0 30px;
 }
 .correct {
   background-color: #42c453;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.232);
 }
 .color-red {
-  color: #e9463a;
+  color: white;
+  background-color: #0265c2;
+  padding: 20px 10px;
 }
 .gestion-error {
   text-align: center;
@@ -54,4 +61,25 @@
 }
 .gestion-error a {
   color: white;
+}
+.defaite {
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  background-color: #e9463a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+@media (max-width: 620px) {
+  .wrap-insert-mot {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .wrap-insert-mot {
+    width: 100%;
+  }
 }

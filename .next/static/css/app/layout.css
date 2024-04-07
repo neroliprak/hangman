@@ -81,11 +81,27 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 3rem;
+  padding: 0 15px;
 }
 .classAbandon {
   display: flex;
 }
 .allComponent {
   margin-top: 50px;
+}
+
+@media (max-width: 690px) {
+  .wrap-affiche {
+    gap: 0rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrap-affiche {
+    display: block;
+  }
+  .classAbandon {
+    display: block;
+  }
 }
 
