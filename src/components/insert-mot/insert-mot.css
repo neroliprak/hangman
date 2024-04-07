@@ -30,3 +30,28 @@
   color: black;
   background-color: white;
 }
+.independant-letter {
+  background-color: #e9463a;
+  color: white;
+  padding: 10px;
+}
+.wrap-idependant-letter {
+  display: flex;
+  gap: 1rem;
+  padding: 0 30px;
+}
+.correct {
+  background-color: #42c453;
+}
+.color-red {
+  color: #e9463a;
+}
+.gestion-error {
+  text-align: center;
+  background-color: #e9463a;
+  color: white;
+  padding: 20px 10px;
+}
+.gestion-error a {
+  color: white;
+}

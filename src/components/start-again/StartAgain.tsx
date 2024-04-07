@@ -1,10 +1,12 @@
-export const StartAgain = ({ children }: any) => {
+import Button from "../button/Button";
+
+export const StartAgain = () => {
   const handleReload = () => {
     window.location.reload();
   };
   return (
     <div>
-      <button onClick={handleReload}>{children}</button>
+      <Button onClick={handleReload} children={"Réactualisé"} />
     </div>
   );
 };

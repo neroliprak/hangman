@@ -39,7 +39,7 @@ export const AfficheMot = ({
           <p>Bravo</p>
           <br />
           <br />
-          <StartAgain children={"Un nouveau mot ?"} />
+          <StartAgain />
         </div>
       )}
     </div>

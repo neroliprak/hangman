@@ -3,7 +3,7 @@
   justify-content: right;
 }
 .abandon-wrap {
-  background-color: #f6b0bb;
+  border: 3px solid #2980d1;
   width: 80%;
   border-radius: 8px;
   padding: 10px 40px;

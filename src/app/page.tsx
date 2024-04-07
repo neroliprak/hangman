@@ -9,13 +9,13 @@ import Abandon from "@/components/abandon/Abandon";
 async function getData(): Promise<Mot> {
   // Appel à l'API en method POST
   const res = await fetch(
-    "https://node-hangman-api-production.up.railway.app",
+    "https://node-hangman-api-production.up.railway.app/",
     {
       method: "POST",
     }
   );
   if (!res.ok) {
-    throw new Error("Erreur data");
+    throw new Error("Erreur data, l'API ne fonctionne pas");
   }
   return res.json();
 }
@@ -25,9 +25,15 @@ export default function Home() {
   // État pour suivre les lettres insérées
   const [insertedLetters, setInsertedLetters] = useState<string[]>([]);
   const [victory, setVictory] = useState(false);
+  const [apiError, setApiError] = useState(false);
 
   useEffect(() => {
-    getData().then(setData);
+    getData()
+      .then(setData)
+      .catch(() => {
+        // Si il y a une erreur de récupération de l'API, boleen à true pour dire qu'il y a un problème
+        setApiError(true);
+      });
   }, []);
 
   const handleLetterInsert = (letter: string) => {
@@ -52,6 +58,18 @@ export default function Home() {
     // À chaque changement, il vérifie si on a gagner ou non
   }, [data, insertedLetters]);
 
+  // Message d'erreur si l'API ne fonctionne pas
+  if (apiError) {
+    return (
+      <div className="gestion-error">
+        <p>
+          L'API ne fonctionne pas, vous pouvez revenir plus tard. Ou bien
+          regarder ce <a href="https://neroliprak.fr/">portfolio</a>.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="allComponent">
       {/* Si l'API est bien chargé, alors on affiche le mot à deviner */}
@@ -70,7 +88,13 @@ export default function Home() {
         </div>
       )}
       {/* Si l'utilisateur n'a pas encore gagné, alors il peut insérer */}
-      {!victory && <InsertMot onLetterInsert={handleLetterInsert}></InsertMot>}
+      {!victory && (
+        <InsertMot
+          data={data}
+          onLetterInsert={handleLetterInsert}
+          maxEssai={5}
+        ></InsertMot>
+      )}
     </div>
   );
 }

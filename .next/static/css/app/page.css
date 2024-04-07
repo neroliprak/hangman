@@ -1,0 +1,121 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/components/affiche-mot/affiche-mot.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+.wrap-nb-letter {
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
+}
+.display-nb-letter {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  text-align: center;
+}
+.letter {
+  border-bottom: 5px solid #2980d1;
+  padding: 10px;
+  margin-top: 40px;
+}
+.victoire {
+  background-color: #14ba59;
+  color: white;
+  width: 80%;
+  padding: 20px 10px;
+  border-radius: 16px;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/components/button/button.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+button {
+  background-color: #2980d1;
+  color: white;
+  border: solid 2px #2980d1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: white;
+  color: #2980d1;
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/components/insert-mot/insert-mot.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+.wrap-insert-mot {
+  justify-content: center;
+  text-align: center;
+  background-color: aliceblue;
+  width: 80%;
+  margin: auto;
+  margin-top: 70px;
+  padding: 30px 0;
+  border-radius: 16px;
+}
+.insert-mot-form input {
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 20px;
+  border: solid 1px rgb(166, 166, 166);
+  margin-top: 10px;
+
+  padding: 5px 5px;
+}
+.insert-mot-form button {
+  border-radius: 20px;
+  background-color: #2980d1;
+  padding: 10px 40px;
+  color: white;
+  border: 2px solid #2980d1;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.insert-mot-form button:hover {
+  color: black;
+  background-color: white;
+}
+.independant-letter {
+  background-color: #e9463a;
+  color: white;
+  padding: 10px;
+}
+.wrap-idependant-letter {
+  display: flex;
+  gap: 1rem;
+  padding: 0 30px;
+}
+.correct {
+  background-color: #42c453;
+}
+.color-red {
+  color: #e9463a;
+}
+.gestion-error {
+  text-align: center;
+  background-color: #e9463a;
+  color: white;
+  padding: 20px 10px;
+}
+.gestion-error a {
+  color: white;
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/components/abandon/abandon.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.abandon {
+  display: flex;
+  justify-content: right;
+}
+.abandon-wrap {
+  border: 3px solid #2980d1;
+  width: 80%;
+  border-radius: 8px;
+  padding: 10px 40px;
+}
+

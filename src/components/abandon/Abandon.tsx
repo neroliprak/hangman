@@ -14,7 +14,10 @@ export const Abandon = ({ data }: { data: Mot }) => {
     <div className="abandon">
       <div className="abandon-wrap">
         <p>Trop dur ? </p>
-        <StartAgain children={"Réactualisé"} />
+        <StartAgain />
+        <br />
+        <hr />
+        <p>Abandon ?</p>
         <button onClick={handleShowAnswer}>Afficher la réponse</button>
         {showAnswer && <p>La réponse est : {data.word}</p>}
       </div>
