@@ -40,9 +40,10 @@
 }
 .wrap-idependant-letter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  padding: 0 30px;
+  padding: 0 0px;
 }
 .correct {
   background-color: #42c453;

@@ -4,6 +4,7 @@ import Mot from "@/types/data";
 import AfficheMot from "@/components/affiche-mot/AfficheMot";
 import InsertMot from "@/components/insert-mot/InsertMot";
 import Abandon from "@/components/abandon/Abandon";
+import Button from "@/components/button/Button";
 
 // --------- Récupération des données de l'API
 async function getData(): Promise<Mot> {
